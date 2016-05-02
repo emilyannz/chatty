@@ -1,11 +1,21 @@
-<header class="header">
-  <div class="header__container">
-    {{#link-to "register" class="links"}}
-    <p class="login-link">Register</p>
-    <p class="login-link">Login</p>
-    {{/link-to}}
-    <h2 id="title">Nashville Chatty Magoos</h2>
-  </div>
-</header>
+{{!-- https://github.com/emilyannz/chatty/pull/1 --}}
 
-{{outlet}}
+<div class="main-container">
+  <div class="nav-container">
+    <h2 class="nav-title">Nashville Chatty Magoos</h2>
+    <div class="container">
+      <ul class="nav-links">
+        <li>
+          {{#link-to "room" class="nav-links__link"}}Chat Room{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "public.signup" class="nav-links__link"}}Sign up{{/link-to}}
+        </li>
+        <li>
+          {{#link-to "public.login" class="nav-links__link"}}Login{{/link-to}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  {{outlet}}
+</div>
