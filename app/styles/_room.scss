@@ -1,0 +1,59 @@
+.main-room-container {
+  flex-grow: 1;
+  color: $brand-grey;
+
+  .room-title {
+    margin: 0;
+  }
+}
+
+.message-room-container {
+  max-height: 28rem;
+  overflow: scroll;;
+}
+
+.message-room {
+  padding: $gutter;
+  background: $brand-light-purple;
+}
+
+.message-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .message-id {
+  }
+
+  .message-time {
+  }
+}
+
+.message-container {
+  display: flex;
+  width: 100%;
+  padding: $gutter;
+  background: $brand-grey;
+  color: $brand-light-grey;
+
+  .message-member {
+    margin-right:
+    color: $brand-blue;
+  }
+
+  .message-content {
+  }
+}
+
+.message-form {
+  margin: $gutter;
+
+  &__input {
+    width: 100%;
+    background: $brand-grey;
+  }
+
+  button {
+    border: 0;
+  }
+}
