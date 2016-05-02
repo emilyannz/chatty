@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  // font-family:
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+input {
+  padding: $gutter;
+  border: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 60rem;
+  margin: auto;
+}
