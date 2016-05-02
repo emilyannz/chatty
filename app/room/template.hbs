@@ -1,0 +1,27 @@
+<div class="main-container">
+  <div class="container">
+    <h1 class="room-title">Main Chat Room</h1>
+    <div class="message-room-container">
+      <ul class="message-room">
+        {{#each model.messages as |message|}}
+          <li>
+            <div class="message-info">
+              <span class="message-id">{{message.id}}.</span>
+              <span class="message-time">{{moment-format message.createdAt 'MMM Do, hh:mm a'}}</span>
+            </div>
+          </li>
+          <li>
+            <div class="message-container">
+              <span class="message-member">{{message.chatter.username}} said:</span>
+              <span class="message-content">{{message.content}}</span>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <form class="message-form" {{action sendMessage newMessage on="submit"}}>
+      {{input class="message-form__input" type="text" placeholder="Enter message here." value=newMessage}}
+      <button>Send</button>
+    </form>
+  </div>
+</div>
